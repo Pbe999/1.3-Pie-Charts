@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<div style='width:1000px'>
+    <canvas id="myChart"></canvas>
+</div>
+<script>
+var ctx = document.getElementById('myChart');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Green','Red'],
+        datasets: [{
+            label: '# of Votes',
+            data: [9,7,],
+            backgroundColor: [
+                'rgba(255, 0 , 0)',
+                'rgba(0, 255, 0, 1)',
+
+            ],
+            borderColor: [
+                'rgba(0, 255, 0, 1)',
+                'rgba(255, 0 , 0)',
+
+            ],
+            borderWidth: 5
+        }]
+    },
+    options:{
+        scales:{
+            y:{
+                beginAtZero: true
+            },
+            x: {
+                ticks:{
+                    stepSize:2
+                }
+            }
+        },
+        indexAxis:'y'
+    }
+});
+
+</script>
+</body>
+</html>

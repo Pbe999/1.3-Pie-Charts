@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<canvas id ='myChart'></canvas>
+<canvas id="chart2"></canvas>
+<script>
+    var ctx=document.getElementById('myChart');
+    var myChart = new Chart(ctx,{
+        type:'line',
+        data:{
+            labels:['Jan', 'Feb', 'Mar', 'Apr','May','June','Jul','Aug','Sep','Oct','Nov','Dec' ],
+            datasets:[{
+                data:[86, 71, 13, 45, 19, 20, 80 ,90, 21, 42,120, 90],
+                label:'going out',
+                borderColor: 'rgba(120, 10, 255, 1)'
+            },
+                {
+                    data:[291, 300, 60, 0, 250, 69, 420 ,11, 200, 160,350, 25],
+                    label:'clothes',
+                    borderColor: 'rgba(0, 120, 255, 1)'
+                },
+                {
+                    data:[145, 151, 185, 158, 197, 162, 111 ,112, 113, 174,194, 0],
+                    label:'Amazon',
+                    borderColor: 'rgba(120, 379, 255, 1)'
+                },
+                {
+                    data:[149, 100, 0, 48, 50, 30, 119 ,90, 21, 42,120, 90],
+                    label:'Movies',
+                    borderColor: 'rgba(120, 12, 11, 1)'
+                }],
+
+        },
+        options:{
+            plugins:{
+                title:{
+                    display: true,
+                    text: 'Monthly Spending'
+                },
+                legend:{
+                    position:'left',
+                }
+            }
+        }
+    });
+</script>
+
+<script>
+    var cty = document.getElementById('chart2');
+    var nextChart = new Chart(cty, {
+        type: 'scatter',
+        data:{
+            datasets:[{
+                label:'Dataset1',
+                backgroundColor:'rgba(255,200,50,1)',
+                pointBackgroundColor:'rgba(255,200,50,1)',
+                pointRadius:4,
+                data:[
+                    {x:7, y:10},
+                    {x:11, y:25},
+                    {x:15, y:15},
+                    {x:17, y:20},
+                    {x:25, y:35},
+                    {x:49, y:60},
+                    {x:70, y:76},
+                    {x:82, y:89},
+                ]
+            },
+                {label:'Dataset2',
+                    backgroundColor:'rgba(50,200,50,1)',
+                    pointBackgroundColor:'rgba(50,200,50,1)',
+                    pointRadius:4,
+                    data:[
+                        {x:12, y:10},
+                        {x:77, y:134},
+                        {x:157, y:161},
+                        {x:205, y:159},
+                        {x:112, y:119},
+                        {x:172, y:150},
+                        {x:177, y:185},
+                        {x:200, y:225},
+                ]
+
+                },
+
+                {label:'Dataset3',
+                    backgroundColor:'rgba(0,100,200,.4)',
+                    pointBackgroundColor:'rgba(0,100,200,.4)',
+                    pointRadius:4,
+                    data:[
+                        {x:10, y:25},
+                        {x:30, y:46},
+                        {x:58, y:62},
+                        {x:71, y:85},
+                        {x:93, y:100},
+                        {x:117, y:129},
+                        {x:131, y:141},
+                        {x:150, y:162},
+                        {x:133, y:147},
+                        {x:156, y:165},
+                    ]
+                },
+                {label:'Dataset4',
+                    backgroundColor:'rgba(100,245,300,.4)',
+                    pointBackgroundColor:'rgba(100,245,300,.4)',
+                    pointRadius:4,
+                    data:[
+                        {x:11, y:22},
+                        {x:33, y:44},
+                        {x:55, y:66},
+                        {x:77, y:88},
+                        {x:99, y:100},
+                        {x:111, y:122},
+                        {x:133, y:144},
+                        {x:155, y:166},
+                        {x:177, y:140},
+                        {x:150, y:160},
+                ]
+
+                },
+            ]
+        },
+        options:{
+
+        }
+    });
+</script>
+</body>
+</html>
