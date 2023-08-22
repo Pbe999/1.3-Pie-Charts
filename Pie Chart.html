@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"
+          integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg=="
+          crossOrigin="anonymous" referrerpolicy="no-referrer"></script>
+<div style ='width:300px'>
+<canvas id ='myChart1'></canvas>
+</div>
+<script>
+  var ctx = document.getElementById('myChart1');
+  var myChart = new Chart(ctx,{
+    type:'doughnut',
+    data:{
+      labels:['Blue','Black', 'Red','Green', 'Purple', 'Orange' ],
+      datasets:[{
+        label:'Distribution of funds',
+        data:[300, 50, 200,40,90,30],
+        backgroundColor:[
+             'rgba(15, 10, 222)',
+             'rgba(0, 0, 0)',
+             'rgba(255, 0, 0)',
+             'rgba(0, 128, 0)',
+             'rgba(165, 55, 253)',
+             'rgba(249, 105, 14)',
+        ],
+        hoverOffset:1
+      }]
+    }
+  });
+</script>
+<div style ='width:300px'>
+<canvas id ='myChart2'></canvas>
+</div>
+<script>
+  var cty = document.getElementById('myChart2');
+  var myChart = new Chart(cty,{
+    type:'pie',
+    data:{
+      labels:['Yellow','Teal', 'Light Green','Grey','Dark Blue','Brown' ],
+      datasets:[{
+        label:'Investments into company',
+        data:[300, 100, 200, 150, 300, 120],
+        backgroundColor:[
+            'rgba(255, 200, 80)',
+            'rgba(0, 128, 128)',
+            'rgba(144, 238, 144)',
+            'rgba(108, 122, 137)',
+            'rgba(8, 14, 44)',
+            'rgba(139, 69, 19)',
+
+        ],
+        hoverOffset:1
+      }]
+    }
+  });
+</script>
+
+
+<div style ='width:200px'>
+  <canvas id ='myChart3'></canvas>
+</div>
+<script>
+  var ctz = document.getElementById('myChart3');
+  var myChart = new Chart(ctz, {
+      type: 'polarArea',
+      data: {
+          labels:[
+              'Green','Red','Yellow','Purple','Black','Orange','Blue','Grey'
+          ],
+          datasets: [{
+          label: 'Northern ice formation chart',
+          data:[11, 10, 15, 10, 12, 13, 19, 20],
+          backgroundColor:[
+              'rgba(0, 128, 0)',
+              'rgba(255, 0, 0)',
+              'rgba(255, 200, 85)',
+              'rgba(165, 55, 253)',
+              'rgba(8, 14, 44)',
+              'rgba(249, 105, 14)',
+              'rgba(15, 10, 222)',
+              'rgba(108, 122, 137)',
+          ]
+          }]
+      },
+  });
+</script>
+
+
+
+</body>
+</html>
